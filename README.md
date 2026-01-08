@@ -12,5 +12,5 @@
 | 4  | MariaDB | [bug#37318](https://jira.mariadb.org/browse/MDEV-37318) | Duplicate  | Yes           |
 | 5  | MariaDB | [bug#38489](https://jira.mariadb.org/browse/MDEV-38489) | Duplicate  | Yes           |
 | 6 | TiDB    | [pingcap/tidb#65444](https://github.com/pingcap/tidb/issues/65444) | Duplicate | Yes |
-| 7 | TiDB    | [pingcap/tidb#65440](https://github.com/pingcap/tidb/issues/65440) | Duplicate | Yes |
+| 7 | TiDB    | [pingcap/tidb#65440](https://github.com/pingcap/tidb/issues/65440) | 误报 | Yes |
 | 8 | TiDB    | [pingcap/tidb#30239](https://github.com/pingcap/tidb/issues/65416) | 未验证 | Yes |
