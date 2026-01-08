@@ -8,9 +8,10 @@
 |----|---------|------|-----------|---------------|
 | 1  | MySQL   | [bug#119409](https://bugs.mysql.com/bug.php?id=119409) | 未验证  | Yes           |
 | 2  | MySQL   | [bug#119632](https://bugs.mysql.com/bug.php?id=119632&thanks=4) | Duplicate  | Yes           |
-| 3  | MariaDB | [bug#35335](https://jira.mariadb.org/browse/MDEV-35335?filter=-2) | Verified  | Yes           |
-| 4  | MariaDB | [bug#37318](https://jira.mariadb.org/browse/MDEV-37318) | Duplicate  | Yes           |
-| 5  | MariaDB | [bug#38489](https://jira.mariadb.org/browse/MDEV-38489) | Duplicate  | Yes           |
-| 6 | TiDB    | [pingcap/tidb#65444](https://github.com/pingcap/tidb/issues/65444) | Duplicate | Yes |
-| 7 | TiDB    | [pingcap/tidb#65440](https://github.com/pingcap/tidb/issues/65440) | 误报 | Yes |
-| 8 | TiDB    | [pingcap/tidb#30239](https://github.com/pingcap/tidb/issues/65416) | 未验证 | Yes |
+| 3  | MySQL   | [bug#119648](https://bugs.mysql.com/bug.php?id=119648&thanks=4) | Duplicate  | Yes           |
+| 4  | MariaDB | [bug#35335](https://jira.mariadb.org/browse/MDEV-35335?filter=-2) | Verified  | Yes           |
+| 5  | MariaDB | [bug#37318](https://jira.mariadb.org/browse/MDEV-37318) | Duplicate  | Yes           |
+| 6  | MariaDB | [bug#38489](https://jira.mariadb.org/browse/MDEV-38489) | Duplicate  | Yes           |
+| 7 | TiDB    | [pingcap/tidb#65444](https://github.com/pingcap/tidb/issues/65444) | Duplicate | Yes |
+| 8 | TiDB    | [pingcap/tidb#65440](https://github.com/pingcap/tidb/issues/65440) | 误报 | Yes |
+| 9 | TiDB    | [pingcap/tidb#30239](https://github.com/pingcap/tidb/issues/65416) | 未验证 | Yes |
