@@ -9,7 +9,7 @@
 | 1  | MySQL   | [bug#119409](https://bugs.mysql.com/bug.php?id=119409) | 未验证  | Yes           ||
 | 2  | MySQL   | [bug#119632](https://bugs.mysql.com/bug.php?id=119632&thanks=4) | Duplicate  | Yes           |[与bug#107066一样](https://bugs.mysql.com/bug.php?id=107066&thanks=4)  |
 | 3  | MySQL   | [bug#119648](https://bugs.mysql.com/bug.php?id=119648&thanks=4) | Duplicate  | Yes           | [与bug#117835一样](https://bugs.mysql.com/bug.php?id=117835&thanks=4)   |
-| 4  | MariaDB | [bug#35335](https://jira.mariadb.org/browse/MDEV-35335?filter=-2) | Verified  | Yes           ||
+| 4  | MariaDB | [bug#38301](https://jira.mariadb.org/browse/MDEV-38301?filter=-2) | Verified  | Yes           ||
 | 5  | MariaDB | [bug#37318](https://jira.mariadb.org/browse/MDEV-37318) | Duplicate  | Yes           | [与bug#32898一样](https://jira.mariadb.org/browse/MDEV-32898)|
 | 6  | MariaDB | [bug#38489](https://jira.mariadb.org/browse/MDEV-38489) | Duplicate  | Yes           ||
 | 7 | TiDB    | [pingcap/tidb#65444](https://github.com/pingcap/tidb/issues/65444) | Duplicate | Yes |[与bug#36581一样，新版本中已经没有这个错](https://github.com/pingcap/tidb/issues/36581) |
