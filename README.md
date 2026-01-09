@@ -12,7 +12,7 @@
 | 4  | MySQL   | [bug#119649](https://bugs.mysql.com/bug.php?id=119649) | 重复  | Yes           | [与bug#117860一样](https://bugs.mysql.com/bug.php?id=117860)   |未回复|
 | 5  | MariaDB | [bug#38301](https://jira.mariadb.org/browse/MDEV-38301?filter=-2) | 验证  | Yes           ||已回复|
 | 6  | MariaDB | [bug#37318](https://jira.mariadb.org/browse/MDEV-37318) | 重复  | Yes           | [与bug#32898一样](https://jira.mariadb.org/browse/MDEV-32898)|已回复，重复|
-| 7  | MariaDB | [bug#38489](https://jira.mariadb.org/browse/MDEV-38489) | 重复  | Yes           ||未回复|
+| 7  | MariaDB | [bug#38489](https://jira.mariadb.org/browse/MDEV-38489) | 重复  | Yes           | 与本表第2个bug一样 |未回复|
 | 8 | TiDB    | [pingcap/tidb#65444](https://github.com/pingcap/tidb/issues/65444) | 重复 | Yes |[与bug#36581一样，新版本中已经没有这个错](https://github.com/pingcap/tidb/issues/36581) |回复测试版本太旧，但新版本中这个错误已经消失了|
 | 9 | TiDB    | [pingcap/tidb#65440](https://github.com/pingcap/tidb/issues/65440) | 误报 | Yes ||回复不是|
 | 10 | TiDB    | [pingcap/tidb#30239](https://github.com/pingcap/tidb/issues/65416) | 误报 | Yes || 未回复|
