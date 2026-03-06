@@ -7,7 +7,7 @@
 |----|---------|------|-----------|---------------|---------|--------|
 | 1  | MySQL   | [bug#119801](https://bugs.mysql.com/bug.php?id=119801) | 验证  | Yes           | 与本表第6个bug一样 |已回复|
 | 2  | MySQL   | [bug#119632](https://bugs.mysql.com/bug.php?id=119632) | 重复  | Yes           |[与bug#107066一样](https://bugs.mysql.com/bug.php?id=107066&thanks=4)  |未回复|
-| 3  | MySQL   | [bug#119648](https://bugs.mysql.com/bug.php?id=119648) | 重复  | Yes           | [与bug#117835一样](https://bugs.mysql.com/bug.php?id=117835&thanks=4)   |未回复|
+| 3  | MySQL   | [bug#119648](https://bugs.mysql.com/bug.php?id=119648) | 误报  | Yes           | [与bug#117835一样](https://bugs.mysql.com/bug.php?id=117835&thanks=4)   |回复，说不是bug|
 | 4  | MySQL   | [bug#119649](https://bugs.mysql.com/bug.php?id=119649) | 重复  | Yes           | [与bug#117860一样](https://bugs.mysql.com/bug.php?id=117860)   |未回复|
 | 5  | MySQL   | [bug#119707](https://bugs.mysql.com/bug.php?id=119707) | 重复  | Yes           | -----------  |未回复|
 | 6  | MariaDB | [bug#38301](https://jira.mariadb.org/browse/MDEV-38301?filter=-2) | 验证  | Yes           ||已回复|
