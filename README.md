@@ -11,7 +11,6 @@
 | 4  | MySQL   | [bug#119649](https://bugs.mysql.com/bug.php?id=119649) | 重复  | Yes           | [与bug#117860一样](https://bugs.mysql.com/bug.php?id=117860)   |未回复|
 | 5  | MySQL   | [bug#119707](https://bugs.mysql.com/bug.php?id=119707) | 重复  | Yes           | -----------  |未回复|
 | 6  | MySQL   | [bug#120129](https://bugs.mysql.com/bug.php?id=120129) | 未验证  | Yes           |  |未回复|
-
 | 7  | MariaDB | [bug#38301](https://jira.mariadb.org/browse/MDEV-38301?filter=-2) | 验证  | Yes           ||已回复|
 | 8  | MariaDB | [bug#37318](https://jira.mariadb.org/browse/MDEV-37318) | 重复  | Yes           | [与bug#32898一样](https://jira.mariadb.org/browse/MDEV-32898)|已回复，重复|
 | 9  | MariaDB | [bug#39151](https://jira.mariadb.org/browse/MDEV-39151) | 未验证  | Yes           | 与mysql的120129 是同一个 |未回复|
