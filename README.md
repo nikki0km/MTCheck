@@ -13,7 +13,7 @@
 | 6  | MariaDB | [bug#38301](https://jira.mariadb.org/browse/MDEV-38301?filter=-2) | 验证  | Yes           ||已回复|
 | 7  | MariaDB | [bug#37318](https://jira.mariadb.org/browse/MDEV-37318) | 重复  | Yes           | [与bug#32898一样](https://jira.mariadb.org/browse/MDEV-32898)|已回复，重复|
 | 8 | TiDB    | [pingcap/tidb#65444](https://github.com/pingcap/tidb/issues/65444) | 重复 | Yes |[与bug#36581一样，新版本中已经没有这个错](https://github.com/pingcap/tidb/issues/36581) |回复测试版本太旧，但新版本中这个错误已经消失了|
-| 9 | TiDB    | [[pingcap/tidb#67213](https://github.com/pingcap/tidb/issues/67213)) | 未回复 | Yes | |
+| 9 | TiDB    | [pingcap/tidb#67213](https://github.com/pingcap/tidb/issues/67213) | 未回复 | Yes | |
 
 
 ----------------------下面的是更全的记录，误报也放上去了
