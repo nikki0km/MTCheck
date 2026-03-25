@@ -33,3 +33,19 @@
 | 10 | TiDB    | [pingcap/tidb#65444](https://github.com/pingcap/tidb/issues/65444) | 重复 | Yes |[与bug#36581一样，新版本中已经没有这个错](https://github.com/pingcap/tidb/issues/36581) |回复测试版本太旧，但新版本中这个错误已经消失了|
 | 11 | TiDB    | [pingcap/tidb#65440](https://github.com/pingcap/tidb/issues/65440) | 误报 | Yes ||回复不是|
 | 12 | TiDB    | [pingcap/tidb#30239](https://github.com/pingcap/tidb/issues/65416) | 误报 | Yes || 未回复|
+
+
+/* init */ DROP TABLE IF EXISTS mtest;
+/* init */ CREATE TABLE mtest(c0 CHAR(12), c1 INT, INDEX i0 (c0(5), c1));
+/* init */ INSERT INTO mtest VALUES ('', 97);
+/* init */ INSERT INTO mtest VALUES ('', 72);
+/* init */ INSERT INTO mtest VALUES (NULL, 9);
+
+/* s2 */ BEGIN;
+/* s2 */ UPDATE mtest SET c0='', c1=13 WHERE c1 IN (9, 97);
+/* s1 */ BEGIN;
+/* s1 */ UPDATE mtest SET c0='L', c1=77 WHERE c0='';  -- blocked
+/* s2 */ COMMIT;
+/* s1 */ COMMIT; 
+-- ERROR 1105 (HY000): tikv aborts txn: 
+-- Error(Txn(Error(Mvcc(Error(PessimisticLockNotFound { ..., reason: LockMissingAmendFail })))))
