@@ -49,3 +49,18 @@
 /* s1 */ COMMIT; 
 -- ERROR 1105 (HY000): tikv aborts txn: 
 -- Error(Txn(Error(Mvcc(Error(PessimisticLockNotFound { ..., reason: LockMissingAmendFail })))))
+
+
+/* init */ CREATE TABLE mtest(x INT DEFAULT 0, c0 INT PRIMARY KEY, c1 INT);
+/* init */ INSERT INTO mtest VALUES (0, 1, 1), (0, 99, 2);
+
+/* s1 */SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED;
+/* s1 */BEGIN;
+/* s2 */SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED;
+/* s2 */BEGIN;
+/* s2 */UPDATE mtest SET c0=37 WHERE c1=2;
+/* s1 */UPDATE mtest SET x = x + 10 WHERE True;（block）
+/* s2 */COMMIT;
+/* s1 */SELECT * FROM mtest;   -- Actual result:    [(10, 1, 1), (0, 37, 2)]
+-- Expected result:  [(10, 1, 1), (10, 37, 2)]  -- Both rows should have x increased by 10
+/* s1 */COMMIT;
