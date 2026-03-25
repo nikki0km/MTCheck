@@ -34,7 +34,7 @@
 | 11 | TiDB    | [pingcap/tidb#65440](https://github.com/pingcap/tidb/issues/65440) | 误报 | Yes ||回复不是|
 | 12 | TiDB    | [pingcap/tidb#30239](https://github.com/pingcap/tidb/issues/65416) | 误报 | Yes || 未回复|
 
-
+{code:sql}
 /* init */ DROP TABLE IF EXISTS mtest;
 /* init */ CREATE TABLE mtest(c0 CHAR(12), c1 INT, INDEX i0 (c0(5), c1));
 /* init */ INSERT INTO mtest VALUES ('', 97);
@@ -49,3 +49,4 @@
 /* s1 */ COMMIT; 
 -- ERROR 1105 (HY000): tikv aborts txn: 
 -- Error(Txn(Error(Mvcc(Error(PessimisticLockNotFound { ..., reason: LockMissingAmendFail })))))
+{code}
