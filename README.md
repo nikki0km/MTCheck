@@ -16,6 +16,7 @@
 | 9  | MariaDB | [bug#39151](https://jira.mariadb.org/browse/MDEV-39151) | 未验证  | Yes           | 与mysql的120129 是同一个。改变执行顺序找到，半一致读未生效 |未回复|
 | 10 | TiDB    | [pingcap/tidb#65444](https://github.com/pingcap/tidb/issues/65444) | 重复 | Yes |[与bug#36581一样，新版本中已经没有这个错](https://github.com/pingcap/tidb/issues/36581) SET autocommit = ON;回滚失败 |回复测试版本太旧，但新版本中这个错误已经消失了|
 | 11 | TiDB    | [pingcap/tidb#67213](https://github.com/pingcap/tidb/issues/67213) | 验证 | Yes |改变执行顺序 |已回复 |
+| 12 | MySQL    | [bug#b#120170](https://bugs.mysql.com/bug.php?id=120170&thanks=4) | 未验证 | Yes |改变执行顺序 |未回复 |
 
 ----------------------下面的是更全的记录，误报也放上去了
 
