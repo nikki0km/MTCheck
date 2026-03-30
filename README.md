@@ -19,7 +19,6 @@
 | 12 | MySQL    | [bug#120170](https://bugs.mysql.com/bug.php?id=120170&thanks=4) | 未验证 | Yes |改变执行顺序，阻塞解除后丢失更新 |未回复 |
 | 13 | MariaDB    | [bug#39203](https://jira.mariadb.org/browse/MDEV-39203) | 未验证 | Yes |改变执行顺序，阻塞解除后丢失更新 |未回复 |
 | 14 | TiDB    | [bug#67398](https://github.com/pingcap/tidb/issues/67398) | 未验证 | Yes |改变执行顺序，阻塞解除后丢失更新，且与mysql不同，delect操作丢失 |未回复 |
-| 15 | TiDB    | [bug#67400](https://github.com/pingcap/tidb/issues/67400)| 重复 | Yes |---------自增列，且是由串行化变并行找到的，与mysql的119707一样|未回复 |
 
 ----------------------下面的是更全的记录，误报也放上去了
 
