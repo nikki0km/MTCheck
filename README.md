@@ -66,3 +66,19 @@
 /* s1 */SELECT * FROM mtest;   -- Actual result:    [(10, 1, 1), (0, 37, 2)]
 -- Expected result:  [(10, 1, 1), (10, 37, 2)]  -- Both rows should have x increased by 10
 /* s1 */COMMIT;
+
+
+/* init */ CREATE TABLE mtest(id INT PRIMARY KEY, val VARCHAR(10));
+/* init */ INSERT INTO mtest VALUES (1, 'a');
+
+/* s2 */ BEGIN PESSIMISTIC;
+/* s2 */ UPDATE mtest SET val = '' WHERE id = 1;
+
+/* s1 */ BEGIN PESSIMISTIC;
+/* s1 */ DELETE FROM mtest WHERE val = '';  -- Blocked
+
+/* s2 */ COMMIT;
+/* s1 */ COMMIT;
+
+SELECT * FROM mtest; -- Actual result: [(1, '')]
+-- Expected result: Empty
