@@ -31,19 +31,22 @@
 | 4  | MySQL   | [bug#119649](https://bugs.mysql.com/bug.php?id=119649) | 重复  | Yes           | [与bug#117860一样](https://bugs.mysql.com/bug.php?id=117860)   |未回复|
 | 5  | MySQL   | [bug#119707](https://bugs.mysql.com/bug.php?id=119707) | 重复  | Yes           | -----------  |未回复|
 | 6  | MySQL   | [bug#120129](https://bugs.mysql.com/bug.php?id=120129) | 误报  | Yes           | 改变执行顺序找到，半一致读未生效 |未回复|
-| 7 | MySQL    | [bug#120170](https://bugs.mysql.com/bug.php?id=120170) | 误报 | Yes |改变执行顺序，阻塞解除后丢失更新 |未回复 |
-| 8  | MariaDB | [bug#38301](https://jira.mariadb.org/browse/MDEV-38301) | 验证  | Yes           ||已回复|
-| 9  | MariaDB | [bug#37318](https://jira.mariadb.org/browse/MDEV-37318) | 重复  | Yes           | [与bug#32898一样](https://jira.mariadb.org/browse/MDEV-32898)|已回复，重复|
-| 10  | MariaDB | [bug#38489](https://jira.mariadb.org/browse/MDEV-38489) | 误报  | Yes           | 与mysql#119632一样 |已经回复，不是bug|
-| 11 | MariaDB | [bug#38572](https://jira.mariadb.org/browse/MDEV-38572) | 误报  | Yes           | 与bug5，bug7一样  |未回复|
-| 12 | MariaDB | [bug#39151](https://jira.mariadb.org/browse/MDEV-39151) | 误报 | Yes           | 与mysql的120129 是同一个。改变执行顺序找到，半一致读未生效 |未回复|
-| 13 | MariaDB    | [bug#39203](https://jira.mariadb.org/browse/MDEV-39203) | 误报 | Yes |改变执行顺序，阻塞解除后丢失更新 |未回复 |
-| 14 | TiDB    | [pingcap/tidb#65444](https://github.com/pingcap/tidb/issues/65444) | 重复 | Yes |[与bug#36581一样，新版本中已经没有这个错](https://github.com/pingcap/tidb/issues/36581) |回复测试版本太旧，但新版本中这个错误已经消失了|
-| 15 | TiDB    | [pingcap/tidb#65440](https://github.com/pingcap/tidb/issues/65440) | 误报 | Yes ||回复不是|
-| 16 | TiDB    | [pingcap/tidb#30239](https://github.com/pingcap/tidb/issues/65416) | 误报 | Yes || 未回复|
-| 17 | TiDB    | [bug#67398](https://github.com/pingcap/tidb/issues/67398) | 未验证 | Yes |改变执行顺序，阻塞解除后丢失更新，且与mysql不同，delect操作丢失 |未回复 |
-| 18 | TiDB    | [bug#67400](https://github.com/pingcap/tidb/issues/67400) | 重复 | Yes |自增列  |未回复 |
-| 19 | TiDB    | [pingcap/tidb#67213](https://github.com/pingcap/tidb/issues/67213) | 验证 | Yes |改变执行顺序 |已回复 |
+| 7  | MySQL   | [bug#118516](https://bugs.mysql.com/bug.php?id=118516)| 误报  | Yes           |  |未回复|
+| 8  | MySQL   | [bug#119409](https://bugs.mysql.com/bug.php?id=119409)| 误报  | Yes           | 阻塞解除更新失败 |未回复|
+| 9  | MySQL   | [bug#120170](https://bugs.mysql.com/bug.php?id=120170)| 误报  | Yes           | 阻塞解除更新失败 |未回复|
+| 10 | MySQL    | [bug#120170](https://bugs.mysql.com/bug.php?id=120170) | 误报 | Yes |改变执行顺序，阻塞解除后丢失更新 |未回复 |
+| 11  | MariaDB | [bug#38301](https://jira.mariadb.org/browse/MDEV-38301) | 验证  | Yes           ||已回复|
+| 12 | MariaDB | [bug#37318](https://jira.mariadb.org/browse/MDEV-37318) | 重复  | Yes           | [与bug#32898一样](https://jira.mariadb.org/browse/MDEV-32898)|已回复，重复|
+| 13  | MariaDB | [bug#38489](https://jira.mariadb.org/browse/MDEV-38489) | 误报  | Yes           | 与mysql#119632一样 |已经回复，不是bug|
+| 14 | MariaDB | [bug#38572](https://jira.mariadb.org/browse/MDEV-38572) | 误报  | Yes           | 与bug5，bug7一样  |未回复|
+| 15 | MariaDB | [bug#39151](https://jira.mariadb.org/browse/MDEV-39151) | 误报 | Yes           | 与mysql的120129 是同一个。改变执行顺序找到，半一致读未生效 |未回复|
+| 16 | MariaDB    | [bug#39203](https://jira.mariadb.org/browse/MDEV-39203) | 误报 | Yes |改变执行顺序，阻塞解除后丢失更新 |未回复 |
+| 17 | TiDB    | [pingcap/tidb#65444](https://github.com/pingcap/tidb/issues/65444) | 重复 | Yes |[与bug#36581一样，新版本中已经没有这个错](https://github.com/pingcap/tidb/issues/36581) |回复测试版本太旧，但新版本中这个错误已经消失了|
+| 18 | TiDB    | [pingcap/tidb#65440](https://github.com/pingcap/tidb/issues/65440) | 误报 | Yes ||回复不是|
+| 19 | TiDB    | [pingcap/tidb#30239](https://github.com/pingcap/tidb/issues/65416) | 误报 | Yes || 未回复|
+| 20 | TiDB    | [bug#67398](https://github.com/pingcap/tidb/issues/67398) | 未验证 | Yes |改变执行顺序，阻塞解除后丢失更新，且与mysql不同，delect操作丢失 |未回复 |
+| 21 | TiDB    | [bug#67400](https://github.com/pingcap/tidb/issues/67400) | 重复 | Yes |自增列  |未回复 |
+| 22 | TiDB    | [pingcap/tidb#67213](https://github.com/pingcap/tidb/issues/67213) | 验证 | Yes |改变执行顺序 |已回复 |
 
 ```sql
 /* init */ DROP TABLE IF EXISTS mtest;
