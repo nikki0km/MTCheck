@@ -1,0 +1,116 @@
+2026-04-14 14:23:50 INFO  Main:23 - Run tests for MYSQL in [DB test]-[Table mtest] on [127.0.0.1:3306]
+2026-04-14 14:23:50 INFO  TableTool:139 - Database URL: jdbc:mysql://127.0.0.1:3306/test?useSSL=false&allowPublicKeyRetrieval=true&useUnicode=true&characterEncoding=UTF-8
+2026-04-14 14:23:50 INFO  TableTool:140 - Database Product Name: MySQL
+2026-04-14 14:23:50 INFO  TableTool:141 - Database Product Version: 8.0.39
+2026-04-14 14:23:50 INFO  TableTool:142 - Driver Name: MySQL Connector/J
+2026-04-14 14:23:50 INFO  TableTool:143 - Driver Version: mysql-connector-java-8.0.27 (Revision: e920b979015ae7117d60d72bcc8f077a839cd791)
+2026-04-14 14:23:50 INFO  TableTool:144 - User Name: root@localhost
+2026-04-14 14:23:50 INFO  Main:166 - Using Metamorphic Relation 2 for test case generation
+2026-04-14 14:23:50 INFO  Main:168 - Create new table.
+2026-04-14 14:23:52 INFO  Main:176 - createsql: CREATE TABLE mtest(c0 INT, c1 VARCHAR(17), c2 VARCHAR(6) DEFAULT NULL, c3 INT PRIMARY KEY AUTO_INCREMENT, c4 CHAR(14) DEFAULT NULL, c5 INT) CHECKSUM = 1
+2026-04-14 14:23:52 INFO  TableTool:618 - Dropping table _mt_origin if exists...
+2026-04-14 14:23:52 INFO  TableTool:647 - Dropped original table
+2026-04-14 14:23:53 INFO  Main:182 - Initial table:
+View{
+	1:[null, null, , 1, g, null]
+	2:[85, tE, +jq+鷁U, 2, , 24]
+	3:[19, 잞Xj, , 3, 9, null]
+	4:[null, null, null, 4, , 58]
+	5:[null, null, Z, 5, null, null]
+}
+
+2026-04-14 14:23:53 INFO  Main:185 - Generate transaction pair 1
+2026-04-14 14:23:54 INFO  TableTool:618 - Dropping table mtest if exists...
+2026-04-14 14:23:54 INFO  TableTool:647 - Dropped original table
+2026-04-14 14:23:54 INFO  Main:198 - Transaction 1:
+Transaction{1, REPEATABLE_READ}, with statements:
+	START TRANSACTION WITH CONSISTENT SNAPSHOT;
+	SELECT * FROM mtest WHERE TRUE;
+	SELECT c3, c4, c5, c0, c2 FROM mtest WHERE c3 BETWEEN LEAST(1352886413, 424713987) AND GREATEST(1352886413, 424713987);
+	SELECT c5, c0 FROM mtest WHERE c0 BETWEEN LEAST(85, 85) AND GREATEST(85, 85) LOCK IN SHARE MODE;
+	SELECT c4, c5, c0 FROM mtest WHERE c4 IN ('9', '9') FOR UPDATE;
+	SELECT * FROM mtest LIMIT 133 WHERE TRUE;
+	COMMIT;
+
+2026-04-14 14:23:54 INFO  Main:199 - Transaction 2:
+Transaction{2, REPEATABLE_READ}, with statements:
+	SET autocommit = ON;
+	BEGIN;
+	DELETE FROM mtest WHERE 0.4698986594585597;
+	SELECT c4, c5, c0 FROM mtest WHERE c4 = '^鶗j%1}d';
+	SELECT c0 FROM mtest WHERE c0 = 19 LOCK IN SHARE MODE;
+	SELECT c5, c0, c2 FROM mtest WHERE -51688141 LOCK IN SHARE MODE;
+	SET autocommit = OFF;
+	ROLLBACK;
+
+2026-04-14 14:23:54 INFO  Main:201 - Generate transaction pair 2
+2026-04-14 14:23:55 INFO  Main:212 - Transaction 3:
+Transaction{1, REPEATABLE_READ}, with statements:
+	START TRANSACTION WITH CONSISTENT SNAPSHOT;
+	SELECT * FROM mtest WHERE TRUE;
+	SELECT c3, c4, c5, c0, c2 FROM mtest WHERE c3 BETWEEN LEAST(1352886413, 424713987) AND GREATEST(1352886413, 424713987);
+	SELECT c5, c0 FROM mtest WHERE c0 BETWEEN LEAST(85, 85) AND GREATEST(85, 85) LOCK IN SHARE MODE;
+	SELECT c4, c5, c0 FROM mtest WHERE c4 IN ('9', '9') FOR UPDATE;
+	SELECT * FROM mtest LIMIT 133 WHERE TRUE;
+	COMMIT;
+
+2026-04-14 14:23:55 INFO  Main:213 - Transaction 4:
+Transaction{2, READ_UNCOMMITTED}, with statements:
+	BEGIN;
+	COMMIT;
+
+2026-04-14 14:23:56 INFO  MtChecker2:78 - Recovering original table
+2026-04-14 14:23:56 INFO  TableTool:618 - Dropping table mtest if exists...
+2026-04-14 14:23:56 INFO  TableTool:647 - Dropped original table
+2026-04-14 14:23:56 INFO  TxnPairExecutor9:284 -  -- TXNThread threadExec exception
+2026-04-14 14:23:56 INFO  TxnPairExecutor9:285 - Query 1-5: SELECT * FROM mtest LIMIT 133 WHERE TRUE
+2026-04-14 14:23:56 INFO  TxnPairExecutor9:289 - SQL Exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE TRUE' at line 1
+2026-04-14 14:23:56 INFO  TableTool:618 - Dropping table mtest if exists...
+2026-04-14 14:23:56 INFO  TableTool:647 - Dropped original table
+2026-04-14 14:23:57 INFO  TxnPairExecutor9:284 -  -- TXNThread threadExec exception
+2026-04-14 14:23:57 INFO  TxnPairExecutor9:285 - Query 1-5: SELECT * FROM mtest LIMIT 133 WHERE TRUE
+2026-04-14 14:23:57 INFO  TxnPairExecutor9:289 - SQL Exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE TRUE' at line 1
+2026-04-14 14:23:57 INFO  MtChecker2:94 - Comparing oracles
+2026-04-14 14:23:57 INFO  MtChecker2:104 - ----------------
+2026-04-14 14:23:57 INFO  MtChecker2:105 - tx1 second global select result: null
+2026-04-14 14:23:57 INFO  MtChecker2:106 - tx3 second global select result: null
+2026-04-14 14:23:57 INFO  MtChecker2:107 - Second global select results are consistent
+2026-04-14 14:23:57 INFO  MtChecker2:108 - -----------------------------------------------------------------------------
+2026-04-14 14:23:57 INFO  Main:185 - Generate transaction pair 1
+2026-04-14 14:23:58 INFO  TableTool:618 - Dropping table mtest if exists...
+2026-04-14 14:23:58 INFO  TableTool:647 - Dropped original table
+2026-04-14 14:23:58 INFO  Main:198 - Transaction 1:
+Transaction{1, REPEATABLE_READ}, with statements:
+	BEGIN;
+	SELECT * FROM mtest WHERE TRUE;
+	SELECT c2 FROM mtest WHERE TRUE;
+	UPDATE mtest SET c3 = 39, c2 = "Zg" WHERE c5 = 58;
+	SELECT c4, c5, c1 FROM mtest WHERE c5 BETWEEN LEAST(58, 58) AND GREATEST(58, 58);
+	SELECT * FROM mtest WHERE TRUE;
+	COMMIT;
+
+2026-04-14 14:23:58 INFO  Main:199 - Transaction 2:
+Transaction{2, SERIALIZABLE}, with statements:
+	BEGIN;
+	SELECT c3, c4, c5, c0, c1, c2 FROM mtest WHERE c5 BETWEEN LEAST(58, -666830776) AND GREATEST(58, -666830776);
+	SELECT c3, c4, c5, c0, c1, c2 FROM mtest WHERE c2 = '';
+	SELECT c0, c2 FROM mtest WHERE -1751743186 FOR UPDATE;
+	SELECT c3, c4, c0, c1, c2 FROM mtest WHERE c0 = 85;
+	COMMIT;
+
+2026-04-14 14:23:58 INFO  Main:201 - Generate transaction pair 2
+2026-04-14 14:23:59 INFO  Main:212 - Transaction 3:
+Transaction{1, REPEATABLE_READ}, with statements:
+	BEGIN;
+	SELECT * FROM mtest WHERE TRUE;
+	SELECT c2 FROM mtest WHERE TRUE;
+	UPDATE mtest SET c3 = 39, c2 = "Zg" WHERE c5 = 58;
+	SELECT c4, c5, c1 FROM mtest WHERE c5 BETWEEN LEAST(58, 58) AND GREATEST(58, 58);
+	SELECT * FROM mtest WHERE TRUE;
+	COMMIT;
+
+2026-04-14 14:23:59 INFO  Main:213 - Transaction 4:
+Transaction{2, SERIALIZABLE}, with statements:
+	BEGIN;
+	COMMIT;
+
