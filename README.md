@@ -1,4 +1,6 @@
 # MTCheck
+MR4 得修改对比逻辑
+
 
 # Bug List
 
